@@ -13,7 +13,7 @@ node 'ip-172-31-44-1.eu-west-1.compute.internal' {
     owner   => 'root',
   }
 }
-node 'minetest.puppet.vm': {
+node 'minetest.puppet.vm' {
   include role::minecraft_server
 }
 node /^web/ { 
