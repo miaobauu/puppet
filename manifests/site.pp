@@ -13,12 +13,12 @@ node 'ip-172-31-44-1.eu-west-1.compute.internal' {
     owner   => 'root',
   }
 }
+node 'minetest.puppet.vm': {
+  include role::minecraft_server
+}
 node /^web/ { 
   include role::app_server
 }
 node /^db/ {
   include role::db_server
-}
-node 'minetest.puppet.vm': {
-  include role::minecraft_server
 }
