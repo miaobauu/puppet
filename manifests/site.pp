@@ -12,9 +12,6 @@ node 'ip-172-31-44-1.eu-west-1.compute.internal' {
     content => "Sto cazzo ${fqdn}\n",
     owner   => 'root',
   }
-  sshkeys::ssh_keygen( "root@ip-172-31-44-1.eu-west-1.compute.internal":
-    $ensure     = present,
-)
 }
 node /^web/ { 
   include role::app_server
